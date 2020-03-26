@@ -63,6 +63,12 @@
 
 <body>
 
+<div class="alert alert-primary text-center" role="alert">
+  Find out how YOU can setup <b>Folding@Home</b>, a distributed computation project that allows you to donate your computer's processing power to help model protein dynamics to combat diseases like Parkinsons, Cancer, Huntingtons, and most importantly, COVID-19.
+  <br>
+  <a class="btn btn-primary" href="https://www.youtube.com/watch?v=KU4qOebhkfs" role="button">Click Here</a>
+</div>
+
     <div id="content-page">
         <div class="content">
             <div class="row ">
