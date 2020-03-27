@@ -4,8 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="Corona Virus Tracker">
-    <meta name="keywords" content="Corona, COVID-19, Coronavirus, Corona Virus Tracker">
-    <meta name="author" content="Furkan KAHVECİ">
+    <meta name="keywords" content="Corona, COVID-19, Corona Virus, Corona Virus Tracker, Coronavirus">
     <meta http-equiv="X-UA-CompatibBle" content="IE=edge" />
 
     <title>Corona Virus (COVID-19) Tracker</title>
@@ -32,7 +31,7 @@
 
         function drawRegionsMap() {
             var data = google.visualization.arrayToDataTable([
-                ['Country', 'Confirmed Cases', ], <?php foreach($MAP as $map) {
+                ['Country', 'Confirmed Cases', ], <?php foreach($RESULT_DATA as $map) {
                     echo '["'.$map['country'].
                     '",'.$map['cases'].
                     '],';
@@ -170,14 +169,12 @@
                                                     <tbody>
                                                         <?php foreach($RESULT_DATA as $result){ ?>
                                                         <tr>
-                                                            <td><img src="https://www.gstatic.com/onebox/sports/logos/flags/<?php echo strtolower(str_replace(" ","_",$result['country'])); ?>_icon_square.svg"
-                                                                    height="20" width="20">
-                                                                <?php echo $result['country'];?></td>
-                                                            <td><?php echo $result['cases'];?></td>
-                                                            <td><?php echo $result['casesPerOneMillion'];?></td>
-                                                            <td><?php echo $result['deaths'];?></td>
-                                                            <td><?php echo $result['recovered'];?></td>
-                                                            <td><?php echo $result['todayCases'];?></td>
+                                                            <td><img src="https://www.gstatic.com/onebox/sports/logos/flags/<?php echo strtolower(str_replace(" ","_",$result['image'])); ?>_icon_square.svg" height="20" width="20"> <?php echo $result['country'];?></td>
+                                                            <td><?php echo number_format($result['cases']);?></td>
+                                                            <td><?php echo number_format($result['casesPerOneMillion']);?></td>
+                                                            <td><?php echo number_format($result['deaths']);?></td>
+                                                            <td><?php echo number_format($result['recovered']);?></td>
+                                                            <td><?php echo number_format($result['todayCases']);?></td>
                                                         </tr>
                                                         <?php } ?>
                                                     </tbody>

@@ -1,10 +1,10 @@
 # Corona Virus Tracker
-Corona Virus Tracker for web with chart.
+Corona Virus tracker for web with chart.
 
 ![image](corona_image.png)
 
-## Demo
-https://bitfor.net/covid19
+## Live Website
+https://bitfor.net/covid19/
 
 ## Features
 * __Live data__: Shows the most recent data, and updates automatically.
