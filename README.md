@@ -1,15 +1,15 @@
-# Corona Virus Tracker
+# Corona Virus Tracker  
 Corona Virus tracker for web with chart.
 
 ![image](corona_image.png)
 
-## Live Website
+## Live Site
 https://bitfor.net/covid19/
 
 ## Features
 * __Live data__: Shows the most recent data, and updates automatically.
 * __GeoChart__:
-* __Current state chart__ for all countries.
+   * __Current state chart__ for all countries.
 * __Search__ for countries.
 * __Statistics__: Including the number of confirmed, recovered, and deaths, in addition to percents.
 

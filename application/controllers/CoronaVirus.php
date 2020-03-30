@@ -4,7 +4,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class CoronaVirus extends CI_Controller 
 {
     private $url = "https://coronavirus-19-api.herokuapp.com/countries";
-    private $img_url = array( "US"=>"United States", "Czechia"=>"Czech Republic", "UAE"=>"United Arab Emirates", "Bosnia and Herzegovina"=>"Bosnia Herzegovina");
+    private $img_url = array( 
+        "US"=>"United States",
+        "UK"=>"United Kingdom", 
+        "S. Korea"=>"South Korea", 
+        "Czechia"=>"Czech Republic", 
+        "UAE"=>"United Arab Emirates", 
+        "Diamond Princess" => "United Kingdom",
+        "Bosnia and Herzegovina"=>"Bosnia Herzegovina",
+        "North Macedonia" => "Macedonia",
+        "Réunion"=>"France",
+        "Faeroe Islands" => "Faroe Islands",
+        "Channel Islands" => "Jersey",
+        "DRC" => "Denmark",
+        "Isle of Man" => "Ireland",
+        "Macao" => "China",
+        "Saint Martin" => "France",
+        "Eswatini" => "Swaziland",
+        "Curaçao" => "Curacao",
+        "Cabo Verde" => "Cape Verde",
+        "Timor-Leste" => "East Timor",
+        "St. Vincent Grenadines" => "St Vincent and Grenadines",
+        "Saint Lucia" => "St Lucia",
+        "Saint Kitts and Nevis" => "St Kitts and Nevis",
+        "Congo" => "Democratic Republic Congo Brazzaville",
+        "Sint Maarten" => "Netherlands",
+        "MS Zaandam" => "Netherlands",
+        "British Virgin Islands" => "United Kingdom",
+        "Guinea-Bissau" => "Guinea Bissau",
+        "St. Barth" => "France",
+        "CAR" => "Central African Republic");
+    
     private $geochart_country= array( "USA"=>"US", "UK"=>"United Kingdom", "S. Korea"=>"South Korea");
 
     public function __construct()
