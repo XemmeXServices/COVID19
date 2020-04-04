@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="Corona Virus Tracker">
     <meta name="keywords" content="Corona, COVID-19, Corona Virus, Corona Virus Tracker, Coronavirus">
+    <meta name="author" content="Daniel Ramirez (DARG367)">
     <meta http-equiv="X-UA-CompatibBle" content="IE=edge" />
 
     <title>Corona Virus (COVID-19) Tracker</title>
@@ -73,7 +74,7 @@
             <div class="row ">
                 <div class=" col-lg-12">
                     <div class="page-header-title" style="margin-top:1px;">
-                        <h4 class="page-title" style="text-align:center;">Corona Virus Tracker</h4>
+                        <h4 class="page-title" style="text-align:center;">Corona Virus (COVID-19) Tracker</h4>
                     </div>
                 </div>
 
@@ -160,20 +161,26 @@
                                                         <tr>
                                                             <th>Location</th>
                                                             <th>Confirmed cases</th>
-                                                            <th>Cases per 1M people</th>
+                                                        <!--<th>Cases per 1M people</th>-->
                                                             <th>Deaths</th>
                                                             <th>Recovered</th>
+                                                            <th>Total Tests</th>
                                                             <th>Changes since last day</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <?php foreach($RESULT_DATA as $result){ ?>
                                                         <tr>
-                                                            <td><img src="https://www.gstatic.com/onebox/sports/logos/flags/<?php echo strtolower(str_replace(" ","_",$result['image'])); ?>_icon_square.svg" height="20" width="20"> <?php echo $result['country'];?></td>
+                                                            
+                                                            <td><img src="<?php if($result['country'] == "World") 
+                                                            {echo $result['image'];}
+                                                            else{ echo "https://www.gstatic.com/onebox/sports/logos/flags/".strtolower(str_replace(" ","_",$result['image']))."_icon_square.svg" ;}?>
+                                                            " height="20" width="20"> <?php echo $result['country'];?></td>
                                                             <td><?php echo number_format($result['cases']);?></td>
-                                                            <td><?php echo number_format($result['casesPerOneMillion']);?></td>
+                                                        <!--<td><?php echo number_format($result['casesPerOneMillion']);?></td>-->
                                                             <td><?php echo number_format($result['deaths']);?></td>
                                                             <td><?php echo number_format($result['recovered']);?></td>
+                                                            <td><?php echo number_format($result['totalTests']);?></td>
                                                             <td><?php echo number_format($result['todayCases']);?></td>
                                                         </tr>
                                                         <?php } ?>
